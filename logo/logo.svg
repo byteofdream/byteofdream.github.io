@@ -1,1 +1,161 @@
-
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 48 48"
+   fill="none"
+   aria-hidden="true"
+   version="1.1"
+   id="svg13"
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="logo.png"
+   inkscape:export-xdpi="2000"
+   inkscape:export-ydpi="2000"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview13"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="16.979167"
+     inkscape:cx="24"
+     inkscape:cy="24"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg13" />
+  <defs
+     id="defs9">
+    <linearGradient
+       id="moon-gradient"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#a78bfa"
+         id="stop1" />
+      <stop
+         offset="50%"
+         stop-color="#7c5cff"
+         id="stop2" />
+      <stop
+         offset="100%"
+         stop-color="#5b8def"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       id="trail-gradient"
+       x1="8"
+       y1="24"
+       x2="20"
+       y2="10"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="rgba(255,255,255,0)"
+         id="stop4" />
+      <stop
+         offset="0.54412127"
+         stop-color="rgba(255,255,255,0.15)"
+         id="stop5" />
+      <stop
+         offset="100%"
+         stop-color="rgba(255,255,255,0.9)"
+         id="stop6" />
+    </linearGradient>
+    <radialGradient
+       id="moon-shine"
+       cx="18"
+       cy="14"
+       r="24.000001"
+       gradientUnits="userSpaceOnUse"
+       fx="18"
+       fy="14"
+       gradientTransform="translate(-4.4171781,4.9472392)">
+      <stop
+         offset="0.44794953"
+         stop-color="rgba(255,255,255,0.25)"
+         id="stop7"
+         style="stop-color:#000000;stop-opacity:0;" />
+      <stop
+         offset="1"
+         stop-color="transparent"
+         id="stop8" />
+    </radialGradient>
+    <filter
+       id="star-glow"
+       x="-0.26666668"
+       y="-0.26666668"
+       width="1.5333334"
+       height="1.5333334">
+      <feGaussianBlur
+         in="SourceAlpha"
+         stdDeviation="0.6"
+         result="blur"
+         id="feGaussianBlur8" />
+      <feFlood
+         flood-color="#fff"
+         flood-opacity="0.9"
+         id="feFlood8" />
+      <feComposite
+         in2="blur"
+         operator="in"
+         id="feComposite8" />
+      <feMerge
+         id="feMerge9">
+        <feMergeNode
+           id="feMergeNode8" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode9" />
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Crescent moon: outer circle minus inner circle -->
+  <circle
+     cx="24"
+     cy="24"
+     r="20"
+     fill="url(#moon-gradient)"
+     id="circle9" />
+  <circle
+     cx="30.353374"
+     cy="19.94356"
+     r="14"
+     fill="#0a0a0f"
+     id="circle10" />
+  <!-- Moon highlight -->
+  <circle
+     cx="71.462578"
+     cy="17.234356"
+     r="14"
+     fill="#0a0a0f"
+     id="circle12"
+     style="fill:#000019;fill-opacity:1" />
+  <!-- Shooting star trail (fading line) -->
+  <path
+     d="M8 24 Q 12 18 20 10"
+     stroke="url(#trail-gradient)"
+     stroke-width="2"
+     stroke-linecap="round"
+     fill="none"
+     id="path12"
+     style="stroke:url(#trail-gradient);fill:#ffffff;fill-opacity:1" />
+  <!-- Shooting star: 4-point star with rounded tips -->
+  <path
+     d="M 18.6 8.6 Q 20 6 21.4 8.6 Q 24 10 21.4 11.4 Q 20 14 18.6 11.4 Q 16 10 18.6 8.6 Z"
+     fill="white"
+     filter="url(#star-glow)"
+     id="path13" />
+</svg>
