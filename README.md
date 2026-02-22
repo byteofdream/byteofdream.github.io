@@ -1,37 +1,37 @@
 # DreamyByte Website
 
-Официальный статический сайт студии **DreamyByte** на чистых `HTML/CSS/JS`.
+Official static website for **DreamyByte**, built with plain `HTML/CSS/JS`.
 
-Сайт включает:
-- главную страницу с описанием студии и команды;
-- каталог проектов (software/games);
-- changelog с обновлениями;
-- страницу ссылок (соцсети/контакты);
-- сервисные страницы `404` и `maintenance`.
+The site includes:
+- a homepage with studio and team information;
+- a projects hub (`software` / `games`);
+- a changelog page for updates;
+- a links page for socials and contact;
+- service pages: `404` and `maintenance`.
 
-## Стек
+## Stack
 
 - `HTML5`
-- `CSS3` (кастомная тема, glass-эффекты, адаптив)
-- `Vanilla JavaScript` (анимации, reveal, активный пункт навигации)
+- `CSS3` (custom theme, glass effects, responsive layout)
+- `Vanilla JavaScript` (animations, reveal effects, active nav state)
 
-Без сборщиков, фреймворков и backend.
+No build tools, frameworks, or backend required.
 
-## Структура проекта
+## Project Structure
 
 ```text
 .
-├── index.html              # Главная
-├── projects.html           # Раздел проектов
-├── software.html           # Подраздел software
-├── games.html              # Подраздел games
-├── changelog.html          # История обновлений
-├── links.html              # Контакты и соцсети
-├── 404.html                # Страница "не найдено"
-├── maintenance.html        # Страница техработ
-├── style.css               # Основные стили сайта
-├── liquid-glass.css        # Доп. стили/эксперименты
-├── script.js               # Поведение UI (reveal/nav active)
+├── index.html              # Home page
+├── projects.html           # Projects hub
+├── software.html           # Software category
+├── games.html              # Games category
+├── changelog.html          # Update history
+├── links.html              # Social/contact links
+├── 404.html                # Not found page
+├── maintenance.html        # Maintenance page
+├── style.css               # Main stylesheet
+├── liquid-glass.css        # Extra style experiments
+├── script.js               # UI behavior (reveal/nav active)
 ├── logo/
 │   ├── logo.svg
 │   └── logo.png
@@ -42,93 +42,92 @@
     └── maintenance-work.svg
 ```
 
-## Страницы
+## Pages
 
 - `index.html`  
-  Презентация студии, миссия, ценности, команда (включая блок `Who's in Our Team`).
+  Studio presentation, mission, values, and team (including `Who's in Our Team` section).
 
 - `projects.html`  
-  Точка входа в категории `software` и `games`.
+  Entry point for `software` and `games` categories.
 
 - `software.html` / `games.html`  
-  Карточки продуктов и прототипов по категориям.
+  Product and prototype cards by category.
 
 - `changelog.html`  
-  Публичный список изменений и новых релизов.
+  Public list of updates and releases.
 
 - `links.html`  
-  Ссылки на GitHub, X, email и дополнительный блок с описанием.
+  GitHub, X, email, and additional info block.
 
 - `404.html`  
-  Кастомная страница ошибки с навигационными действиями.
+  Custom not-found page with quick navigation actions.
 
 - `maintenance.html`  
-  Страница техобслуживания с пояснениями для посетителей.
+  Maintenance notice page with status text for visitors.
 
-## Локальный запуск
+## Local Run
 
-Так как это статический сайт, достаточно открыть `index.html` в браузере.  
-Для корректной разработки лучше поднять локальный сервер.
+Because this is a static website, you can open `index.html` directly in a browser.  
+For development, using a local server is recommended.
 
-Примеры:
+Example:
 
 ```bash
 # Python
 python3 -m http.server 8080
 ```
 
-После запуска:
-- открой `http://localhost:8080`
+Then open:
+- `http://localhost:8080`
 
-## Кастомизация
+## Customization
 
-### Контент
+### Content
 
-Редактируй тексты напрямую в `.html`:
-- главная: `index.html`
-- проекты: `projects.html`, `software.html`, `games.html`
-- обновления: `changelog.html`
-- ссылки: `links.html`
-- сервисные страницы: `404.html`, `maintenance.html`
+Edit text directly in `.html` files:
+- home: `index.html`
+- projects: `projects.html`, `software.html`, `games.html`
+- updates: `changelog.html`
+- links: `links.html`
+- service pages: `404.html`, `maintenance.html`
 
-### Дизайн
+### Design
 
-Основные переменные темы находятся в начале `style.css` (`:root`):
-- цвета фона и текста;
-- акцентные градиенты;
-- радиусы;
-- типографика;
-- длительности анимаций.
+Theme variables are defined at the top of `style.css` in `:root`:
+- background and text colors;
+- accent gradients;
+- border radii;
+- typography;
+- animation timings.
 
-### Логотип и иконки
+### Logo and Icons
 
-- логотип: `logo/logo.svg`, `logo/logo.png`
-- иконки: `icons/*`
+- logo: `logo/logo.svg`, `logo/logo.png`
+- icons: `icons/*`
 
-## Деплой
+## Deployment
 
-Проект подходит для любого статического хостинга:
+This project works with any static hosting provider:
 - GitHub Pages
 - Netlify
 - Vercel (static)
 - Cloudflare Pages
 
-### GitHub Pages (быстрый вариант)
+### GitHub Pages (quick setup)
 
-1. Загрузить репозиторий на GitHub.
-2. В `Settings -> Pages` выбрать ветку (обычно `main`) и папку `/ (root)`.
-3. Сохранить настройки и дождаться публикации.
+1. Push the repository to GitHub.
+2. In `Settings -> Pages`, select your branch (usually `main`) and `/ (root)`.
+3. Save and wait for publication.
 
-## Поведение UI
+## UI Behavior
 
-`script.js` реализует:
-- появление блоков при скролле (`IntersectionObserver`);
-- изменение размера верхней панели при прокрутке;
-- автоподсветку активного пункта меню по текущему URL.
+`script.js` handles:
+- scroll reveal animations (`IntersectionObserver`);
+- top nav shrinking on scroll;
+- automatic active nav link highlighting based on URL.
 
-## Примечания
+## Notes
 
-- Сайт полностью статический и не требует сборки.
-- Для продакшна рекомендуется настроить серверный редирект на `404.html`.
-- Для страницы техработ можно на уровне хостинга временно перенаправлять весь трафик на `maintenance.html`.
-
+- The website is fully static and does not require a build step.
+- For production, configure your host to serve `404.html` for unknown routes.
+- During maintenance windows, you can temporarily redirect traffic to `maintenance.html` at the hosting level.
