@@ -425,8 +425,39 @@ section ul li::before {
 .team-card p {
     color: var(--text-secondary);
     font-size: 0.95rem;
-    margin: 0;
+    margin: 0 0 1rem;
     line-height: 1.6;
+}
+
+.team-card-socials {
+    display: flex;
+    justify-content: center;
+    gap: 0.65rem;
+}
+
+.team-social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.team-social-link:hover {
+    transform: translateY(-2px);
+    border-color: rgba(124, 92, 255, 0.35);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22), 0 0 24px var(--accent-glow);
+}
+
+.team-social-link img {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+    opacity: 0.95;
 }
 
 .changelog-item {
@@ -600,4 +631,146 @@ section ul li::before {
 @media (max-width: 480px) {
     .logo { font-size: 1.15rem; }
     .nav a { font-size: 0.9rem; }
+}
+
+/* ========== STATUS PAGES (404 / MAINTENANCE) ========== */
+.status-wrap {
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7rem 1.25rem 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.status-card {
+    width: min(760px, 100%);
+    text-align: center;
+}
+
+.status-code {
+    display: inline-block;
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: clamp(3.2rem, 14vw, 7rem);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 1rem;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.status-card h1 {
+    font-family: var(--font-head);
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    margin-bottom: 0.75rem;
+}
+
+.status-card p {
+    color: var(--text-secondary);
+    margin: 0 auto 2rem;
+    max-width: 560px;
+}
+
+.status-illustration {
+    width: min(380px, 100%);
+    height: auto;
+    margin: 0 auto 1.5rem;
+    display: block;
+    filter: drop-shadow(0 20px 40px rgba(124, 92, 255, 0.22));
+}
+
+.status-list {
+    list-style: none;
+    max-width: 560px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+
+.status-list li {
+    position: relative;
+    color: var(--text-secondary);
+    padding-left: 1.3rem;
+    margin-bottom: 0.65rem;
+}
+
+.status-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gradient-accent);
+}
+
+.status-note {
+    margin-top: 1.2rem;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+}
+
+.status-actions {
+    display: flex;
+    gap: 0.9rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.status-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.2rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-glass);
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 600;
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.status-btn:hover {
+    transform: translateY(-2px);
+    border-color: rgba(124, 92, 255, 0.35);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 30px var(--accent-glow);
+}
+
+.status-btn-primary {
+    background: var(--gradient-accent);
+    border-color: transparent;
+}
+
+.status-btn-primary:hover {
+    box-shadow: 0 10px 30px rgba(124, 92, 255, 0.35);
+}
+
+@media (max-width: 640px) {
+    .status-card {
+        text-align: left;
+    }
+
+    .status-code,
+    .status-card h1,
+    .status-card .section-label {
+        display: block;
+        text-align: center;
+    }
+
+    .status-card p,
+    .status-list {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .status-actions {
+        justify-content: flex-start;
+    }
 }
