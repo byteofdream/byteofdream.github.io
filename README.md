@@ -5,6 +5,7 @@ Official static website for **DreamyByte**, built with plain `HTML/CSS/JS`.
 The site includes:
 - a homepage with studio and team information;
 - a projects hub (`software` / `games`);
+- a news page for major announcements;
 - a changelog page for updates;
 - a links page for socials and contact;
 - service pages: `404` and `maintenance`.
@@ -25,6 +26,7 @@ No build tools, frameworks, or backend required.
 ├── projects.html           # Projects hub
 ├── software.html           # Software category
 ├── games.html              # Games category
+├── news.html               # Major announcements
 ├── changelog.html          # Update history
 ├── links.html              # Social/contact links
 ├── 404.html                # Not found page
@@ -52,6 +54,9 @@ No build tools, frameworks, or backend required.
 
 - `software.html` / `games.html`  
   Product and prototype cards by category.
+
+- `news.html`  
+  Major studio announcements (e.g., project milestones and launches).
 
 - `changelog.html`  
   Public list of updates and releases.
